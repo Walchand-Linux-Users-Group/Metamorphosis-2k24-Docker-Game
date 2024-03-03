@@ -6,7 +6,7 @@ const Submit = () => {
 
     const handleFormSubmit = (e) => {
         e.preventDefault()
-        axios.post('http://localhost:3000/api/v1/submit', {
+        axios.post('https://dmeta2024games.onrender.com/api/v1/submit', {
             username: username,
             flag: flag
         })

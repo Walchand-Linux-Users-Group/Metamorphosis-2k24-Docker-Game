@@ -129,3 +129,39 @@ body {
 .r3f{
   position: absolute;
 }
+.rank{
+  position: absolute;
+  background-color: #ffffff51;
+  width: 20vw;
+  height: 64vh;
+  top: 20vh;
+  right: 30vh; 
+  border-radius: 20px;
+  /* opacity: 0.5; */
+}
+
+.rank h1{
+  text-align: center;
+  margin-top: 20px;
+  font-size: 2em;
+  color: #ffffff;
+}
+.inner{
+  color: white;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  gap: 60px;
+  margin-top: 20px;
+}
+.bottom{
+  display: flex;
+  position: relative;
+  align-items: center;
+  margin: 0 auto;
+  text-align: center;
+  justify-content: center;
+  gap: 20px;
+  color: white;
+}
