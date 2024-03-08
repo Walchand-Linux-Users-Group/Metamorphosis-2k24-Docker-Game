@@ -75,14 +75,14 @@ const Submit = () => {
             </div>
             <div className="inputBx">
               <button onClick={handleLeaderboard}>
-                🏁 See Leaderboarder! 🏁
+                🏁 See Leaderboard! 🏁
               </button>
             </div>
           </div>
         </form>
       </div>
       <div className="mobile-button">
-        <button onClick={handleLeaderboard}>🏁 See Leaderboarder! 🏁</button>
+        <button onClick={handleLeaderboard}>🏁 See Leaderboard! 🏁</button>
       </div>
     </>
   );

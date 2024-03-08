@@ -19,13 +19,7 @@ const Main = () => {
 
       <div className="wrapper">
         <div className="header-container">
-          <img
-            src={wlug}
-            alt="react"
-            // onClick={() => {
-            //   window.location.href = "https://www.wcewlug.org/";
-            // }}
-          />
+          <img src={wlug} alt="react" />
         </div>
         <div className="main">
           <Submit />

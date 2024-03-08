@@ -79,7 +79,7 @@ const Container = () => {
   return (
     <div className="Leaderb">
       <div className="search">
-        <div className="search-title">Search Your Rank!!</div>
+        <div className="search-title">Check Your Rank!!</div>
         <div id="input-login" className="inputMain">
           <input
             className="searchInput"

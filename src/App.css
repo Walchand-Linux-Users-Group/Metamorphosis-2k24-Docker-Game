@@ -84,7 +84,7 @@ body {
   gap: 20px;
 }
 .login h2 {
-  font-size: 2.1em;
+  font-size: 1.9em;
   color: #fff;
 }
 .login .inputBx {
@@ -129,11 +129,11 @@ body {
   padding: 12px 20px;
   border-radius: 40px;
   font-size: 1.1em;
-  color: #000;
+  color: #fff;
   box-shadow: none;
   outline: none;
   font-weight: bold;
-  background: linear-gradient(45deg, #00bfff, #25deff);
+  background: linear-gradient(45deg, #ff357a, #ea00ff);
 }
 
 .login .inputBx input::placeholder {
@@ -327,6 +327,7 @@ body {
 .header-container > img {
   width: 10rem;
   height: 10rem;
+  margin-left: 1.4rem;
 }
 .main {
   height: 100%;
@@ -391,11 +392,11 @@ body {
     padding: 12px 20px;
     border-radius: 0.5rem;
     font-size: 1.1em;
-    color: #000;
+    color: #fff;
     box-shadow: none;
     outline: none;
     font-weight: bold;
-    background: linear-gradient(45deg, #00bfff, #25deff);
+    background: linear-gradient(45deg, #ff357a, #ea00ff);
   }
 
   .search {
@@ -461,5 +462,6 @@ body {
   .header-container > img {
     width: 6rem;
     height: 6rem;
+    margin-left: 0;
   }
 }
