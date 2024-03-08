@@ -82,7 +82,9 @@ const Submit = () => {
         </form>
       </div>
       <div className="mobile-button">
-        <button onClick={handleLeaderboard}>🏁 See Leaderboard! 🏁</button>
+        <button onClick={handleLeaderboard} style={{ zIndex: "1000000" }}>
+          🏁 See Leaderboard! 🏁
+        </button>
       </div>
     </>
   );
