@@ -1,6 +1,6 @@
 import axios from "axios";
 import { useEffect, useState } from "react";
-import coin from "../assets/coin.png";
+import coin from "../assets/coins2.png";
 import trophy from "../assets/trophy.png";
 
 const Container = () => {
