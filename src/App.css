@@ -1,8 +1,7 @@
-
 @import url("https://fonts.googleapis.com/css2?family=Quicksand:wght@300&display=swap");
 html,
 body,
-#root{
+#root {
   position: fixed;
   top: 0;
   left: 0;
@@ -12,7 +11,7 @@ body,
 * {
   margin: 0;
   padding: 0;
-  box-sizing: border-box; 
+  box-sizing: border-box;
   font-family: "Quicksand", sans-serif;
 }
 body {
@@ -25,16 +24,17 @@ body {
   overflow: hidden;
 }
 .ring {
-  scale: 1.2;
-  position: relative;
-  top: 240px;
-  left: 270px;
-  width: 500px;
-  height: 500px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 75vh;
+  height: 75vh;
   display: flex;
   justify-content: center;
   align-items: center;
 }
+
 .ring i {
   position: absolute;
   inset: 0;
@@ -75,7 +75,7 @@ body {
 }
 .login {
   position: absolute;
-  width: 300px;
+  width: 400px;
   height: 100%;
   display: flex;
   justify-content: center;
@@ -84,7 +84,7 @@ body {
   gap: 20px;
 }
 .login h2 {
-  font-size: 2em;
+  font-size: 2.5em;
   color: #fff;
 }
 .login .inputBx {
@@ -102,17 +102,34 @@ body {
   color: #fff;
   box-shadow: none;
   outline: none;
+  font-weight: bold;
 }
-.login .inputBx input[type="submit"] {
+.login .inputBx input[type="submit"],
+.login .inputBx button {
   width: 100%;
   background: #0078ff;
   background: linear-gradient(45deg, #ff357a, #ea00ff);
+  background-position: 200% 0;
   border: none;
   cursor: pointer;
+  transition: all 0.5s ease;
 }
+
+.login .inputBx button {
+  padding: 12px 20px;
+  border-radius: 40px;
+  font-size: 1.1em;
+  color: #000;
+  box-shadow: none;
+  outline: none;
+  font-weight: bold;
+  background: linear-gradient(45deg, #35ff93, #00ff2f);
+}
+
 .login .inputBx input::placeholder {
   color: rgba(255, 255, 255, 0.75);
 }
+
 .login .links {
   position: relative;
   width: 100%;
@@ -126,36 +143,155 @@ body {
   text-decoration: none;
 }
 
-.r3f{
+.r3f {
   position: absolute;
-}
-.rank{
-  position: absolute;
-  background-color: #ffffff51;
-  width: 20vw;
-  height: 64vh;
-  top: 20vh;
-  right: 30vh; 
-  border-radius: 20px;
-  /* opacity: 0.5; */
 }
 
-.rank h1{
+.Leaderb {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-weight: bolder;
+}
+
+.search {
+  color: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100vw;
+  height: 15vh;
+  font-size: 1.2em;
+}
+
+.search-title {
+  margin-right: 1rem;
+}
+.inputMain {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.searchInput {
+  border: none;
+  padding: 0.6rem 0.5rem;
+  width: 20rem;
+  margin-right: 1rem;
+  border-radius: 0.5rem;
+  transition: all 0.2s;
+}
+
+.searchInput:focus {
+  outline: none;
+  border-radius: 0.8rem;
+}
+
+.searchIcon {
+  height: 1.3rem;
+  width: 1.3rem;
+}
+
+.searchBtn {
+  border-radius: 50%;
+  outline: none;
+  border: none;
+  cursor: pointer;
+  padding: 0.1rem;
+  background: linear-gradient(45deg, #ff357a, #ea00ff);
+}
+
+.search-btn {
+  display: flex;
+  height: 2.5rem;
+  width: 2.5rem;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  z-index: inherit;
+  border-radius: 50%;
+}
+
+.msg {
+  margin-left: 5rem;
+}
+.rank {
+  background-image: linear-gradient(
+    to right bottom,
+    rgba(245, 245, 245, 0.1),
+    rgba(174, 174, 174, 0.2),
+    rgba(245, 245, 245, 0.1)
+  );
+  backdrop-filter: blur(2px);
+  width: 90vw;
+  height: 80vh;
+  overflow-y: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: space-between;
+  padding: 2rem 4rem;
+  /* opacity: 0.5; */
+}
+.rank::-webkit-scrollbar {
+  display: none;
+}
+.rank h1 {
   text-align: center;
-  margin-top: 20px;
   font-size: 2em;
   color: #ffffff;
 }
-.inner{
+
+.inner {
   color: white;
   display: flex;
   flex-direction: row;
   align-items: center;
-  justify-content: center;
-  gap: 60px;
+  justify-content: space-between;
+  /* gap: 60px; */
   margin-top: 20px;
+  padding-left: 2rem;
+  padding-right: 2rem;
 }
-.bottom{
+.title {
+  font-size: 1.3em;
+  padding: 1rem 6rem 1rem 5rem;
+}
+.player-rank {
+  background-image: linear-gradient(
+    to right bottom,
+    rgba(245, 245, 245, 0.2),
+    rgba(174, 174, 174, 0.4),
+    rgba(245, 245, 245, 0.2)
+  );
+  padding: 1rem 7rem;
+  border-radius: 0.3rem;
+  transition: all 0.3s ease;
+  font-size: 1.2em;
+}
+
+.player-rank:hover {
+  background: linear-gradient(45deg, #ff357a, #ea00ff);
+  color: white;
+  scale: 1.02;
+  cursor: pointer;
+  font-weight: bold;
+}
+.points {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.points-title {
+  margin-right: 3rem;
+}
+.points-coin {
+  width: 3.2rem;
+}
+.bottom {
   display: flex;
   position: relative;
   align-items: center;
@@ -164,4 +300,154 @@ body {
   justify-content: center;
   gap: 20px;
   color: white;
+}
+
+.wrapper {
+  /* border: 1px solid white; */
+  height: 100vh;
+  width: 100vw;
+}
+
+.header-container {
+  width: 100vw;
+  margin-bottom: 2rem;
+  padding-left: 1rem;
+}
+
+.header-container > img {
+  width: 10rem;
+  height: 10rem;
+}
+.main {
+  /* border: 1px solid white; */
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.mobile-button {
+  display: none;
+}
+
+@media only screen and (max-width: 600px) {
+  .ring {
+    width: 88vw;
+    height: 88vw;
+  }
+  .login {
+    width: 230px;
+  }
+  .login h2 {
+    font-size: 1.5em;
+  }
+  .login .inputBx input {
+    padding: 7px 5px;
+    border: 2px solid #fff;
+    border-radius: 0.5rem;
+    font-size: 1em;
+  }
+
+  .login .inputBx button {
+    display: none;
+  }
+
+  .login .inputBx input::placeholder {
+    color: rgba(255, 255, 255, 0.75);
+  }
+
+  .login .links {
+    position: relative;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 20px;
+  }
+  .login .links a {
+    color: #fff;
+    text-decoration: none;
+  }
+  .mobile-button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    padding-top: 8rem;
+  }
+  .mobile-button > button {
+    padding: 12px 20px;
+    border-radius: 40px;
+    font-size: 1.1em;
+    color: #000;
+    box-shadow: none;
+    outline: none;
+    font-weight: bold;
+    background: linear-gradient(45deg, #35ff93, #00ff2f);
+  }
+
+  .search {
+    margin-top: 2rem;
+    flex-direction: column;
+    min-height: 10vh;
+    font-size: 1.1em;
+  }
+
+  .search-title {
+    margin-right: 0;
+  }
+  .inputMain {
+    margin-top: 0.5rem;
+    margin-bottom: 0.5rem;
+  }
+
+  .searchInput {
+    width: 15rem;
+  }
+
+  .searchInput:focus {
+    border-radius: 0.6rem;
+  }
+  .msg {
+    margin-left: 0;
+    margin: 0 0.2rem 1rem 0.2rem;
+  }
+  .rank {
+    backdrop-filter: blur(2px);
+    height: 65vh;
+    padding: 2rem;
+  }
+  .rank > h1 {
+    margin-bottom: 1rem;
+  }
+  .inner {
+    margin-top: 10px;
+    padding-left: 0;
+    padding-right: 0;
+  }
+
+  .title {
+    font-size: 1.2em;
+    padding: 1rem;
+  }
+  thead {
+    display: none;
+  }
+  td {
+    margin-right: 1rem;
+  }
+  .player-rank {
+    padding: 1rem;
+    border-radius: 0.3rem;
+    transition: all 0.3s ease;
+    font-size: 1em;
+    margin: 1rem 0;
+  }
+  .points-coin {
+    width: 2rem;
+  }
+  .header-container > img {
+    width: 6rem;
+    height: 6rem;
+  }
 }
