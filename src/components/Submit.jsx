@@ -49,15 +49,17 @@ const Submit = () => {
         <i style={{ "--clr": "#a60074" }}></i>
         <form action="submit" onSubmit={handleFormSubmit} className="login">
           <div className="login">
-            <h2>CONTAINERS</h2>
+            <h2 style={{ textAlign: "center", marginBottom: "0.2rem" }}>
+              PIRATES OF CONTAINERS
+            </h2>
             <div className="inputBx" onChange={handlesUsername}>
-              <input type="text" placeholder="Username" />
+              <input type="text" placeholder="Enter Meta ID" />
             </div>
             <div className="inputBx">
               <input
                 type="text"
                 value={flag}
-                placeholder="Flag"
+                placeholder="Enter Flag"
                 onChange={handleFlag}
               />
             </div>
