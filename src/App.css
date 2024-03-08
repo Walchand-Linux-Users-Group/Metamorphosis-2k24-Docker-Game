@@ -299,7 +299,8 @@ body {
   margin-right: 3rem;
 }
 .points-coin {
-  width: 3.2rem;
+  width: 2.6rem;
+  margin-left: 1rem;
 }
 .bottom {
   display: flex;
@@ -458,6 +459,7 @@ body {
   }
   .points-coin {
     width: 2rem;
+    margin-left: 0.2rem;
   }
   .header-container > img {
     width: 6rem;
