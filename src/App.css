@@ -91,7 +91,8 @@ body {
   position: relative;
   width: 100%;
 }
-.login .inputBx input {
+.login .inputBx input,
+.login .inputBx p {
   position: relative;
   width: 100%;
   padding: 12px 20px;
@@ -105,7 +106,8 @@ body {
   font-weight: bold;
 }
 .login .inputBx input[type="submit"],
-.login .inputBx button {
+.login .inputBx button,
+.login .inputBx p {
   width: 100%;
   background: #0078ff;
   background: linear-gradient(45deg, #ff357a, #ea00ff);
@@ -113,8 +115,16 @@ body {
   border: none;
   cursor: pointer;
   transition: all 0.5s ease;
+  text-align: center;
 }
-
+.msggg {
+  color: #fff;
+  text-align: center;
+  width: 100%;
+  margin: auto;
+  font-weight: bolder;
+  margin-top: 0.5rem;
+}
 .login .inputBx button {
   padding: 12px 20px;
   border-radius: 40px;
@@ -123,7 +133,7 @@ body {
   box-shadow: none;
   outline: none;
   font-weight: bold;
-  background: linear-gradient(45deg, #35ff93, #00ff2f);
+  background: linear-gradient(45deg, #00bfff, #25deff);
 }
 
 .login .inputBx input::placeholder {
@@ -319,7 +329,6 @@ body {
   height: 10rem;
 }
 .main {
-  /* border: 1px solid white; */
   height: 100%;
   display: flex;
   flex-direction: column;
@@ -327,6 +336,9 @@ body {
 
 .mobile-button {
   display: none;
+}
+.trophy {
+  width: 2.2rem;
 }
 
 @media only screen and (max-width: 600px) {
@@ -373,17 +385,17 @@ body {
     align-items: center;
     width: 100%;
     height: 100%;
-    padding-top: 8rem;
+    padding-top: 16rem;
   }
   .mobile-button > button {
     padding: 12px 20px;
-    border-radius: 40px;
+    border-radius: 0.5rem;
     font-size: 1.1em;
     color: #000;
     box-shadow: none;
     outline: none;
     font-weight: bold;
-    background: linear-gradient(45deg, #35ff93, #00ff2f);
+    background: linear-gradient(45deg, #00bfff, #25deff);
   }
 
   .search {

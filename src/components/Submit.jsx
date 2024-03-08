@@ -5,21 +5,30 @@ const Submit = () => {
   const [username, setUsername] = useState("");
   const [flag, setFlag] = useState("");
   const navigate = useNavigate();
+  const [loading, setLoading] = useState(false);
+  const [msg, setMsg] = useState("");
+
   // const [responses, setResponses] = useState(0)
   const handleFormSubmit = (e) => {
     e.preventDefault();
+    setLoading(true);
     axios
       .post("https://dmeta2024games.onrender.com/api/v1/submit", {
         username: username,
         flag: flag,
       })
       .then((response) => {
-        alert("Correct Flag");
+        setMsg("Correct Flag");
+        setLoading(false);
+        setFlag("");
       })
       .catch((error) => {
-        alert("Invalid Flag or invalid username");
+        setMsg("Invalid Flag or invalid username");
+        setLoading(false);
+        setFlag("");
       });
   };
+
   const handlesUsername = (e) => {
     setUsername(e.target.value);
   };
@@ -29,7 +38,9 @@ const Submit = () => {
 
   const handleLeaderboard = () => {
     navigate("/leaderboard");
+    console.log("Leaderboard");
   };
+
   return (
     <>
       <div className="ring">
@@ -43,10 +54,22 @@ const Submit = () => {
               <input type="text" placeholder="Username" />
             </div>
             <div className="inputBx">
-              <input type="text" placeholder="Flag" onChange={handleFlag} />
+              <input
+                type="text"
+                value={flag}
+                placeholder="Flag"
+                onChange={handleFlag}
+              />
             </div>
             <div className="inputBx">
-              <input type="submit" value="Submit Flag" />
+              {loading ? (
+                <p>Loading...</p>
+              ) : (
+                <>
+                  <input type="submit" value="Submit Flag" />
+                  <div className="msggg">{msg}</div>
+                </>
+              )}
             </div>
             <div className="inputBx">
               <button onClick={handleLeaderboard}>
