@@ -1,10 +1,8 @@
 import { useState } from "react";
 import axios from "axios";
-import { useNavigate } from "react-router-dom";
 const Submit = () => {
   const [username, setUsername] = useState("");
   const [flag, setFlag] = useState("");
-  const navigate = useNavigate();
   const [loading, setLoading] = useState(false);
   const [msg, setMsg] = useState("");
 
@@ -34,11 +32,6 @@ const Submit = () => {
   };
   const handleFlag = (e) => {
     setFlag(e.target.value);
-  };
-
-  const handleLeaderboard = () => {
-    navigate("/leaderboard");
-    console.log("Leaderboard");
   };
 
   return (
@@ -73,19 +66,11 @@ const Submit = () => {
                 </>
               )}
             </div>
-            <div className="inputBx">
-              <button onClick={handleLeaderboard}>
-                🏁 See Leaderboard! 🏁
-              </button>
-            </div>
+            <div className="inputBx"></div>
           </div>
         </form>
       </div>
-      <div className="mobile-button">
-        <button onClick={handleLeaderboard} style={{ zIndex: "1000000" }}>
-          🏁 See Leaderboard! 🏁
-        </button>
-      </div>
+      <div className="mobile-button"></div>
     </>
   );
 };

@@ -5,7 +5,7 @@ import trophy from "../assets/trophy.png";
 
 const Container = () => {
   const [user, setUser] = useState([]);
-  const [x, setX] = useState(30);
+  // const [x, setX] = useState(30);
   const [rankMsg, setRankMsg] = useState("");
   const [rankSearch, setrankSearch] = useState("");
 
