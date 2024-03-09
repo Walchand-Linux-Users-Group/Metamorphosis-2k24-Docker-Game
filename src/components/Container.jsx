@@ -9,15 +9,15 @@ const Container = () => {
   const [rankMsg, setRankMsg] = useState("");
   const [rankSearch, setrankSearch] = useState("");
 
-  useEffect(() => {
-    const intervalId = setInterval(() => {
-      setX(x - 1);
-    }, 1000);
-    if (x === 0) {
-      setX(30);
-    }
-    return () => clearInterval(intervalId);
-  }, [x]);
+  // useEffect(() => {
+  //   const intervalId = setInterval(() => {
+  //     setX(x - 1);
+  //   }, 1000);
+  //   if (x === 0) {
+  //     setX(30);
+  //   }
+  //   return () => clearInterval(intervalId);
+  // }, [x]);
 
   useEffect(() => {
     const fetchData = () => {
@@ -146,7 +146,7 @@ const Container = () => {
             ))}
           </tbody>
         </table>
-        <div className="bottom">Fetching New Ranklist in {x} seconds</div>
+        {/* <div className="bottom">Fetching New Ranklist in {x} seconds</div> */}
       </div>
     </div>
   );
