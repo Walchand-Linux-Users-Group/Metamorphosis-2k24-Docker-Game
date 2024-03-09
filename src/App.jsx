@@ -6,9 +6,9 @@ import Leaderboard from "./components/Leaderboard";
 
 function App() {
   return (
-    <Routes> 
-      <Route path="/" element={<Main />} />
-      <Route path="/leaderboard" element={<Leaderboard />} />
+    <Routes>
+      <Route exact path="/" element={<Main />} />
+      <Route exact path="/leaderboard" element={<Leaderboard />} />
     </Routes>
   );
 }
