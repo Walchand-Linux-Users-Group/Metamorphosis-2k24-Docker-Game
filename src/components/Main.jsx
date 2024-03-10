@@ -35,8 +35,6 @@ const Main = () => {
               position: "absolute",
               right: 0,
               top: 0,
-              marginTop: "5rem",
-              marginRight: "4rem",
             }}
           >
             <input id="one" type="checkbox" onChange={handleClick} />
