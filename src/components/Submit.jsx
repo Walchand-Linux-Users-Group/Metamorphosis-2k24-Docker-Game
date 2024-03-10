@@ -60,10 +60,10 @@ const Submit = () => {
               {loading ? (
                 <p>Loading...</p>
               ) : (
-                <>
-                  <input type="submit" value="Submit Flag" />
-                  <div className="msggg">{msg}</div>
-                </>
+                // <>
+                //   <input type="submit" value="Submit Flag" />
+                //   <div className="msggg">{msg}</div>
+                // </>
               )}
             </div>
             <div className="inputBx"></div>
