@@ -56,16 +56,7 @@ const Submit = () => {
                 onChange={handleFlag}
               />
             </div>
-            <div className="inputBx">
-              {loading ? (
-                <p>Loading...</p>
-              ) : (
-                // <>
-                //   <input type="submit" value="Submit Flag" />
-                //   <div className="msggg">{msg}</div>
-                // </>
-              )}
-            </div>
+
             <div className="inputBx"></div>
           </div>
         </form>
